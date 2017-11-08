@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>	Victor y sus amigos </title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css" >
+		<link rel="stylesheet" href="../css/main.css" >
+	</head>
+	<body>
+
+				<h1>{{titulo}}</h1>
+				<h2>PERSONA</h2>
+						<div class="container py-5 d-flex align-items-start flex-wrap justify-content">
+													<div>
+														<img class="card-img-top " src="/img/{{persona.imagen}}" alt="Card image cap">
+														<p><b>Nombres: </b> {{ persona.nombres }}</p>
+														<p><b>Apellidos: </b>{{ persona.apellidos }}</p>
+														<p><b>Edad: </b>{{ persona.edad }}</p>
+													</div>
+						</div>
+				<h2>AMIGOS</h2>
+						<div class="container py-5 d-flex align-items-start flex-wrap justify-content">
+												{% for amigo in amigos %}
+												<article>
+													<img class="card-img-top " src="/img/{{amigo.imagen}}" alt="Card image cap">
+													<p><b>Nombres: </b> {{ amigo.nombres }}</p>
+													<p><b>Apellidos: </b>{{ amigo.apellidos }}</p>
+													<p><b>Edad: </b>{{ amigo.edad }}</p>
+												</article>
+												{% endfor %}
+					 </div>
+
+
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		<script src="../js/jquery-3.1.1.slim.min.js" ></script>
+		<script src="../js/tether.min.js" ></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</body>
+</html>
